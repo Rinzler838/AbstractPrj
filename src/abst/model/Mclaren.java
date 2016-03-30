@@ -2,31 +2,31 @@ package abst.model;
 
 import javax.swing.JOptionPane;
 
-public class Acura extends SportsCar
+public class Mclaren extends SportsCar
 {
-	public Acura()
+	public Mclaren()
 	{
 		super();
 		
-		this.setModelName("Acura NSX 2017");
+		this.setModelName("Mclaren P1");
 		this.setSeatingCapacity(2);
-		this.setPrice(156000);
-		this.setTopSpeed(191);
+		this.setPrice(1150000);
+		this.setTopSpeed(217);
 		this.setHybrid(true);
 	}
 
 	@Override
 	public String name()
 	{
-		String name = "Acura NSX 2017";
+		String name = "Mclaren P1";
 		
-		return name;
+		return null;
 	}
 
 	@Override
 	public int speed()
 	{
-		return 191;
+		return 217;
 	}
 
 	@Override

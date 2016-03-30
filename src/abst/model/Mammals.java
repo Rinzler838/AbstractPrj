@@ -2,31 +2,40 @@ package abst.model;
 
 import javax.swing.JOptionPane;
 
-public class Acura extends SportsCar
+public class Mammals extends FluffyThings implements MovingThing 
 {
-	public Acura()
+	public Mammals()
 	{
 		super();
-		
-		this.setModelName("Acura NSX 2017");
-		this.setSeatingCapacity(2);
-		this.setPrice(156000);
-		this.setTopSpeed(191);
-		this.setHybrid(true);
+	}
+
+	public String size()
+	{
+		return "varies";
+	}
+
+	public String group()
+	{
+		return "Mammals";
+	}
+
+
+	public double goodnessScale()
+	{
+		return 7.0;
 	}
 
 	@Override
 	public String name()
 	{
-		String name = "Acura NSX 2017";
-		
+		String name = "Mammals";
 		return name;
 	}
 
 	@Override
 	public int speed()
 	{
-		return 191;
+		return 7;
 	}
 
 	@Override

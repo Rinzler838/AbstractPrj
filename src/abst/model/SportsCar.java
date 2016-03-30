@@ -1,11 +1,12 @@
 package abst.model;
 
-public abstract class Car
+public abstract class SportsCar implements MovingThing
 {
 	private String modelName;
-	private int passengerNumber;
+	private int seatingCapacity;
 	private int topSpeed;
 	private int price;
+	private boolean isHybrid;
 
 	public String getModelName()
 	{
@@ -17,14 +18,14 @@ public abstract class Car
 		this.modelName = modelName;
 	}
 	
-	public int getPassengerNumber()
+	public int getCapacity()
 	{
-		return passengerNumber;
+		return seatingCapacity;
 	}
 	
-	public void setPassengerNumber(int passengerNumber)
+	public void setSeatingCapacity(int seatingCapacity)
 	{
-		this.passengerNumber = passengerNumber;
+		this.seatingCapacity = seatingCapacity;
 	}
 	
 	public int getTopSpeed()
@@ -45,5 +46,15 @@ public abstract class Car
 	public void setPrice(int price)
 	{
 		this.price = price;
+	}
+
+	public boolean isHybrid()
+	{
+		return isHybrid;
+	}
+
+	public void setHybrid(boolean isHybrid)
+	{
+		this.isHybrid = isHybrid;
 	}
 }
