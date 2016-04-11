@@ -11,14 +11,14 @@ public class InheritanceController
 {
 	private ArrayList <MovingThing> movingThings;
 	
-	public String Race()
+	public String MovingSpeed()
 	{
 		String moving = "";
 		for (MovingThing current : movingThings)
 		{
 			if (current.isMoving() == true)
 			{
-				moving = current.name(moving) + " is moving at a speed of" + current.speed();
+				moving.concat(current.name(moving) + " is moving at a speed of" + current.speed() + "\n");
 			}
 		}
 		return moving;
