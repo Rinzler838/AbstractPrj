@@ -3,6 +3,10 @@ package abst.controller;
 import java.util.ArrayList;
 import abst.model.*;
 
+/**
+ * @author Deigen Villalobos, Tyler Jarrard
+ */
+
 public class InheritanceController 
 {
 	private ArrayList <MovingThing> movingThings;
