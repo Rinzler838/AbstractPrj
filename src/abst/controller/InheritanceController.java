@@ -11,7 +11,7 @@ public class InheritanceController
 {
 	private ArrayList <MovingThing> movingThings;
 	
-	public String MovingSpeed()
+	public String MovingSpeed ()
 	{
 		String moving = "";
 		for (MovingThing current : movingThings)
