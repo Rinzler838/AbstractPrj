@@ -16,11 +16,11 @@ public class Mclaren extends SportsCar
 	}
 
 	@Override
-	public String name()
+	public String name(String name)
 	{
-		String name = "Mclaren P1";
+		name = "Mclaren P1";
 		
-		return null;
+		return name;
 	}
 
 	@Override

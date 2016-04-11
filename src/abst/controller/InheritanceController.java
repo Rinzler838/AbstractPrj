@@ -1,7 +1,6 @@
 package abst.controller;
 
 import java.util.ArrayList;
-
 import abst.model.*;
 
 public class InheritanceController 
@@ -11,13 +10,16 @@ public class InheritanceController
 	public String Race()
 	{
 		String moving = "";
-		for (int current = 0; current < movingThings.size(); current++)
+		for (MovingThing current : movingThings)
 		{
-			  
+			if (current.isMoving() == true)
+			{
+				moving = current.name(moving) + " is moving at a speed of" + current.speed();
+			}
 		}
 		return moving;
 	}
-	
+
 	private void makeMovingList()
 	{
 		movingThings.add(new Acura());

@@ -16,9 +16,9 @@ public class Acura extends SportsCar
 	}
 
 	@Override
-	public String name()
+	public String name(String name)
 	{
-		String name = "Acura NSX 2017";
+		name = "Acura NSX 2017";
 		
 		return name;
 	}

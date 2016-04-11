@@ -26,9 +26,9 @@ public class Mammals extends FluffyThings implements MovingThing
 	}
 
 	@Override
-	public String name()
+	public String name(String name)
 	{
-		String name = "Mammals";
+		name = "Mammals";
 		return name;
 	}
 

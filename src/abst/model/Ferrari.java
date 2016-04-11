@@ -14,11 +14,11 @@ public class Ferrari extends SportsCar
 	}
 
 	@Override
-	public String name()
+	public String name(String name)
 	{
-		String name = "Ferrari LaFerrari";
+		name = "Ferrari LaFerrari";
 		
-		return null;
+		return name;
 	}
 
 	@Override
