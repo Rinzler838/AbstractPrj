@@ -1,5 +1,10 @@
 package abst.model;
 
+/**
+ * Implements the MovingThing and Comparable Interfaces
+ * @author Deigen Villalobos
+ *
+ */
 public class Ferrari extends SportsCar
 {
 	public Ferrari()
@@ -13,7 +18,6 @@ public class Ferrari extends SportsCar
 		this.setHybrid(true);
 	}
 
-	@Override
 	public String name(String name)
 	{
 		name = "Ferrari LaFerrari";
@@ -21,21 +25,24 @@ public class Ferrari extends SportsCar
 		return name;
 	}
 
-	@Override
 	public int speed()
 	{
 		return 227;
 	}
 
-	@Override
 	public boolean isMoving()
 	{
 		return true;
 	}
 
-	@Override
 	public void moveThing(int speed)
 	{
-		
+		for (int current = 0; current <= speed; current++)
+		{
+			if (current > 0)
+			{
+				System.out.println(isMoving());
+			}
+		}
 	}
 }

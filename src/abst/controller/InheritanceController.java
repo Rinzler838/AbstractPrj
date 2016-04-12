@@ -11,7 +11,12 @@ public class InheritanceController
 {
 	private ArrayList <MovingThing> movingThings;
 	
-	public String MovingSpeed ()
+	public InheritanceController()
+	{
+		makeMovingList();
+	}
+	
+	public String MovingSpeed()
 	{
 		String moving = "";
 		for (MovingThing current : movingThings)
@@ -30,6 +35,5 @@ public class InheritanceController
 		movingThings.add(new Ferrari());
 		movingThings.add(new Mclaren());
 		movingThings.add(new Mammals());
-		
 	}
 }
