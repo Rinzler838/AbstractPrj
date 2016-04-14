@@ -13,4 +13,5 @@ public interface MovingThing
 	public boolean isMoving();
 	public void moveThing(int speed);
 	public String toString();
+	public int compareTo(Object thing);
 }

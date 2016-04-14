@@ -36,4 +36,29 @@ public class InheritanceController
 		movingThings.add(new Mclaren());
 		movingThings.add(new Mammals());
 	}
+	
+	public void start()
+	{
+		
+	}
+	
+	public void swap(int firstLocation, int secondLocation)
+	{
+		MovingThing temp = movingThings.get(firstLocation);
+		movingThings.set(firstLocation, movingThings.get(secondLocation));
+		movingThings.set(secondLocation, temp);
+	}
+	
+	public void insertionSort()
+	{
+		for (int outerLoop = 1; outerLoop < movingThings.size(); outerLoop++)
+		{
+			int innerLoop = outerLoop;
+			while (innerLoop > 0 && (movingThings.get(innerLoop - 1).compareTo(movingThings.get(innerLoop)) > 0))
+			{
+				swap (innerLoop, outerLoop - 1);
+				innerLoop--;
+			}
+		}
+	}
 }
