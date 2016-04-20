@@ -1,37 +1,34 @@
 package abst.view;
 
-import javax.swing.JButton;
-import javax.swing.JTextField;
-import javax.swing.SpringLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
 import abst.controller.InheritanceController;
+import abst.model.MovingThing;
 
-public class InheritancePanel
+public class InheritancePanel extends JPanel
 {
 	private InheritanceController baseController;
-	private JButton abstButton;
-	private JTextField abstField;
-	private SpringLayout baseLayout;
+	private JButton sortButton;
+	private JTextArea textArea;
 
-	public InheritancePanel(InheritanceController baseController)
-	{		
+	public InheritancePanel (InheritanceController baseController)
+	{
 		this.baseController = baseController;
-	
-		baseLayout = new SpringLayout();
-		abstButton = new JButton("Click this button...");
-		abstField = new JTextField("You type words in here...");
-	
+		sortButton = new JButton("Sort");
+		
 		setupPanel();
 		setupLayout();
 		setupListeners();
 	}
-
+	
 	private void setupPanel()
 	{
-		this.setLayout(baseLayout);
-		this.add(abstButton);
-		this.add(abstField);
+		textArea = new JTextArea(2,20);
+		this.add(textArea);
+		this.add(sortButton);
 	}
-
+	
 	private void setupLayout()
 	{
 	
@@ -39,7 +36,20 @@ public class InheritancePanel
 
 	private void setupListeners()
 	{
-	
+		sortButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				baseController.insertionSort();
+				textArea.setText(baseController.MovingSpeed());
+				String temp = "The sorted contents are: \n";
+				for (MovingThing current : baseController.getMovingThings())
+				{
+					temp += current.toString() + "\n";
+				}
+				textArea.setText(temp);
+			}
+		});
 	}
 
 }

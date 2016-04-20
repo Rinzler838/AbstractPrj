@@ -1,7 +1,9 @@
 package abst.controller;
 
 import java.util.ArrayList;
+
 import abst.model.*;
+import abst.view.InheritanceFrame;
 
 /**
  * @author Deigen Villalobos, Tyler Jarrard
@@ -13,7 +15,9 @@ public class InheritanceController
 	
 	public InheritanceController()
 	{
+		this.movingThings = new ArrayList<MovingThing>();
 		makeMovingList();
+		InheritanceFrame baseFrame = new InheritanceFrame();
 	}
 	
 	public String MovingSpeed()
@@ -88,5 +92,10 @@ public class InheritanceController
 		swap (position, high);
 		
 		return position;
+	}
+
+	public Object getMovingThings()
+	{
+		return movingThings;
 	}
 }

@@ -3,23 +3,25 @@ package abst.view;
 import javax.swing.JFrame;
 import abst.controller.InheritanceController;
 
+
 public class InheritanceFrame extends JFrame
 {
-	private InheritanceController basicController;
+	private InheritanceController baseController;
 	private InheritancePanel basePanel;
-	
-	public InheritanceFrame(InheritanceController baseController)
+		
+	public InheritanceFrame()
 	{
-		this.basicController = baseController;
+		this.baseController = baseController;
 		basePanel = new InheritancePanel(baseController);
 		setupFrame();
 	}
-	
+
 	private void setupFrame()
 	{
-		this.setSize(500,500);
-		this.setTitle("");
-		this.setResizable(true);
+		this.setContentPane(basePanel);
+		this.setSize(800,720);
+		this.setTitle("Inheritance Prj");
+		this.setResizable(false);
 		this.setVisible(true);
 	}
 }
