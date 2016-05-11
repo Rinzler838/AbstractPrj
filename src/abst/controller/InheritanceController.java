@@ -17,7 +17,7 @@ public class InheritanceController
 	{
 		this.movingThings = new ArrayList<MovingThing>();
 		makeMovingList();
-		InheritanceFrame baseFrame = new InheritanceFrame();
+		InheritanceFrame baseFrame = new InheritanceFrame(InheritanceController baseController);
 	}
 	
 	public String MovingSpeed()

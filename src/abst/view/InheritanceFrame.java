@@ -9,7 +9,7 @@ public class InheritanceFrame extends JFrame
 	private InheritanceController baseController;
 	private InheritancePanel basePanel;
 		
-	public InheritanceFrame()
+	public InheritanceFrame(InheritanceController baseController)
 	{
 		this.baseController = baseController;
 		basePanel = new InheritancePanel(baseController);
@@ -19,7 +19,7 @@ public class InheritanceFrame extends JFrame
 	private void setupFrame()
 	{
 		this.setContentPane(basePanel);
-		this.setSize(800,720);
+		this.setSize(450, 300);
 		this.setTitle("Inheritance Prj");
 		this.setResizable(false);
 		this.setVisible(true);
